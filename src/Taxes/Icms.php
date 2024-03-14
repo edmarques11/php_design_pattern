@@ -8,6 +8,6 @@ class Icms implements Taxe
 {
   public function calcTax(Budget $budget): float
   {
-    return $budget->value * 0.1;
+    return $budget->getValue() * 0.1;
   }
 }

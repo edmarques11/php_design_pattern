@@ -1,13 +1,11 @@
 <?php
 
-use Alura\DesignPattern\{Budget, CalculatorTaxes};
-use Alura\DesignPattern\Taxes\{Iss, Icms};
+use Alura\DesignPattern\Budget;
+use Alura\DesignPattern\CalculatorDiscounts;
 
 require 'vendor/autoload.php';
 
-$calculator = new CalculatorTaxes();
+$calculator = new CalculatorDiscounts();
+$budget = new Budget(600, 4);
 
-$budget = new Budget();
-$budget->value = 100;
-
-echo $calculator->calculate($budget, new Iss());
+echo $calculator->calculate($budget);

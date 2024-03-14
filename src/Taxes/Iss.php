@@ -8,6 +8,6 @@ class Iss implements Taxe
 {
   public function calcTax(Budget $budget): float
   {
-    return $budget->value * 0.06;
+    return $budget->getValue() * 0.06;
   }
 }
