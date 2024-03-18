@@ -4,7 +4,7 @@ namespace Alura\DesignPattern\Taxes;
 
 use Alura\DesignPattern\Budget;
 
-class Iss implements Taxe
+class Iss implements Tax
 {
   public function calcTax(Budget $budget): float
   {

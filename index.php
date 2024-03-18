@@ -1,11 +1,12 @@
 <?php
 
 use Alura\DesignPattern\Budget;
-use Alura\DesignPattern\CalculatorDiscounts;
+use Alura\DesignPattern\CalculatorTaxes;
+use Alura\DesignPattern\Taxes\Ikcv;
 
 require 'vendor/autoload.php';
 
-$calculator = new CalculatorDiscounts();
-$budget = new Budget(600, 4);
+$calculator = new CalculatorTaxes();
+$budget = new Budget(800, 1);
 
-echo $calculator->calculate($budget);
+echo $calculator->calculate($budget, new Ikcv());

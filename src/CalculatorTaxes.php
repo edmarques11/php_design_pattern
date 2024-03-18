@@ -2,12 +2,12 @@
 
 namespace Alura\DesignPattern;
 
-use Alura\DesignPattern\Taxes\Taxe;
+use Alura\DesignPattern\Taxes\Tax;
 
 class CalculatorTaxes
 {
-  public function calculate(Budget $budget, Taxe $taxe): float
+  public function calculate(Budget $budget, Tax $tax): float
   {
-    return $taxe->calcTax($budget);
+    return $tax->calcTax($budget);
   }
 }
